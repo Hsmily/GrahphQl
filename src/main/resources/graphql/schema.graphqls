@@ -1,0 +1,20 @@
+type Query {
+    employees: [model]
+    employee(Id:Int): model
+}
+
+type Mutation {
+    create(input: EmployeeInput): model
+    updateEmployee(id: ID!, input: EmployeeInput!): model
+}
+
+type model {
+    Id: ID!
+    employeename: String
+    mobilenumber: String
+}
+
+input EmployeeInput {
+    employeename: String
+    mobilenumber: String
+}
